@@ -165,7 +165,7 @@ public final class StdRandom {
 
     /**
      * Returns a random boolean from a Bernoulli distribution with success
-     * probability <em>p</em>.
+     * probability lpl.
      *
      * @param  p the probability of returning <tt>true</tt>
      * @return <tt>true</tt> with probability <tt>p</tt> and
@@ -224,7 +224,7 @@ public final class StdRandom {
 
     /**
      * Returns a random integer from a geometric distribution with success
-     * probability <em>p</em>.
+     * probability lpl.
      * 
      * @param  p the parameter of the geometric distribution
      * @return a random integer from a geometric distribution with success
