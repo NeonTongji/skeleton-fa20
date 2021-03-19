@@ -1,4 +1,4 @@
-/*import org.junit.Test;
+import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestPalindrome {
@@ -8,11 +8,31 @@ public class TestPalindrome {
 
     @Test
     public void testWordToDeque() {
-        Deque d = palindrome.wordToDeque("persiflage");
+        Deque<Character> d = palindrome.wordToDeque("persiflage");
         String actual = "";
         for (int i = 0; i < "persiflage".length(); i++) {
             actual += d.removeFirst();
         }
         assertEquals("persiflage", actual);
     }
-}     Uncomment this class once you've created your Palindrome class. */
+
+    @Test
+    public void testIsPalindrome() {
+        assertTrue(palindrome.isPalindrome("tenet"));
+        assertFalse(palindrome.isPalindrome("bigcock"));
+        assertTrue(palindrome.isPalindrome("abccba"));
+        assertFalse(palindrome.isPalindrome("aBcba"));
+    }
+
+    @Test
+    public void testOffPalindromeOverrloaded() {
+        OffByOne o = new OffByOne();
+        assertTrue(palindrome.isPalindrome("flake", o));
+        assertFalse(palindrome.isPalindrome("tweak", o));
+        assertTrue(palindrome.isPalindrome("t", o));
+        assertTrue(palindrome.isPalindrome("",o));
+        assertTrue(palindrome.isPalindrome(" ",o));
+    }
+
+}
+//Uncomment this class once you've created your Palindrome class.
