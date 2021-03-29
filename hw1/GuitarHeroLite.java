@@ -17,7 +17,8 @@ public class GuitarHeroLite {
                 char key = StdDraw.nextKeyTyped();
                 if (key == 'a') {
                     stringA.pluck();
-                } else if (key == 'c') {
+                }
+                else if (key == 'c') {
                     stringC.pluck();
                 }
             }
